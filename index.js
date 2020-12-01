@@ -30,5 +30,10 @@ var numberDay = fullDate.substr(8, 2);
 var yearDay = fullDate.substr(11, 4);
 var time = fullDate.substr(16, 8);
 
-$('#dateTimeDate').text(weekDay + " " + monthDay + " " + numberDay + " " + yearDay);
-$('#dateTimeTime').text(time);
+let dateTimeDate = weekDay + " " + monthDay + " " + numberDay + " " + yearDay;
+let dateTimeTime = time;
+
+console.log(typeof(dateTimeDate));
+
+$('#dateTimeDate').text(dateTimeDate);
+$('#dateTimeTime').text(dateTimeTime);
