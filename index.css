@@ -4,18 +4,15 @@
 }
 
 
-* {
-  font-family: JetBrains;
-}
-
-
 #pEntries {
-
+  font-family: JetBrains;
+  font-size: 2vh;
 }
 
 
 #dateTime {
-
+  font-family: JetBrains;
+  font-size: 2vh;
 } #dateTimeDate {
 
 } #dateTimeTime {
@@ -24,7 +21,8 @@
 
 
 #todo {
-
+  font-family: JetBrains;
+  font-size: 2vh;
 } #todoTitle {
 
 } #todoBoxes {
@@ -35,7 +33,8 @@
 
 
 #log {
-
+  font-family: JetBrains;
+  font-size: 2vh;
 } #logTitle {
 
 } #logtext {
