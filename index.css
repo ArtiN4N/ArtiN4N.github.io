@@ -1,3 +1,14 @@
+@font-face {
+  font-family: JetBrains;
+  src: url(fonts/jetbrains/web/woff2/JetBrainsMono-Regular.woff2);
+}
+
+
+#html {
+  font-family: JetBrains;
+}
+
+
 #pEntries {
 
 }
