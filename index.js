@@ -29,4 +29,4 @@ var monthDay = months[fullDate.substr(4, 3)];
 var numberDay = fullDate.substr(8, 2);
 var yearDay = fullDate.substr(11, 4);
 var time = fullDate.substr(16, 8);
-console.log(weekDay, monthDay, numberDay, yearDay, time);
+$j('h1#dateTimeDate').text(weekDay + " " + monthDay + " " + numberDay + " " + yearDay);
