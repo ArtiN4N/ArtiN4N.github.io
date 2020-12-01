@@ -6,35 +6,44 @@
 
 #pEntries {
   font-family: JetBrains;
+  position: relative;
   font-size: 1em;
 }
 
 
 #dateTime {
   font-family: JetBrains;
-
+  position: relative;
 } #dateTimeDate {
   font-size: 4em;
+  position: relative;
 } #dateTimeTime {
   font-size: 3em;
+  position: relative;
 }
 
 
 #todo {
   font-family: JetBrains;
+  position: relative;
 } #todoTitle {
   font-size: 2em;
+  position: relative;
 } #todoBoxes {
-
+  position: relative;
 } #todoText {
   font-size: 1em;
+  position: relative;
 }
 
 
 #log {
   font-family: JetBrains;
+  position: relative;
 } #logTitle {
   font-size: 2em;
+  position: relative;
 } #logtext {
   font-size: 1em;
+  position: relative;
 }
