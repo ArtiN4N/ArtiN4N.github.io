@@ -12,31 +12,29 @@
 
 #dateTime {
   font-family: JetBrains;
-  font-size: 2vh;
+
 } #dateTimeDate {
-
+  font-size: 8vh;
 } #dateTimeTime {
-
+  font-size: 6vh;
 }
 
 
 #todo {
   font-family: JetBrains;
-  font-size: 2vh;
 } #todoTitle {
-
+  font-size: 4vh;
 } #todoBoxes {
 
 } #todoText {
-
+  font-size: 2vh;
 }
 
 
 #log {
   font-family: JetBrains;
-  font-size: 2vh;
 } #logTitle {
-
+  font-size: 4vh;
 } #logtext {
-
+  font-size: 2vh;
 }
