@@ -30,5 +30,5 @@ var numberDay = fullDate.substr(8, 2);
 var yearDay = fullDate.substr(11, 4);
 var time = fullDate.substr(16, 8);
 
-$('h1#dateTimeDate').text(weekDay + " " + monthDay + " " + numberDay + " " + yearDay);
-$('h1#dateTimeTime').text(time);
+$('#dateTimeDate').text(weekDay + " " + monthDay + " " + numberDay + " " + yearDay);
+$('#dateTimeTime').text(time);
