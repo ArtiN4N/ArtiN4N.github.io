@@ -3,6 +3,9 @@
   src: url(fonts/jetbrains/web/woff2/JetBrainsMono-Regular.woff2);
 }
 
+.divider {
+  position: relative;
+}
 
 #pEntries {
   font-family: JetBrains;
