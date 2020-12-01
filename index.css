@@ -6,7 +6,7 @@
 
 #pEntries {
   font-family: JetBrains;
-  font-size: 2vw;
+  font-size: 1em;
 }
 
 
@@ -14,27 +14,27 @@
   font-family: JetBrains;
 
 } #dateTimeDate {
-  font-size: 8vw;
+  font-size: 4em;
 } #dateTimeTime {
-  font-size: 6vw;
+  font-size: 3em;
 }
 
 
 #todo {
   font-family: JetBrains;
 } #todoTitle {
-  font-size: 4vw;
+  font-size: 2em;
 } #todoBoxes {
 
 } #todoText {
-  font-size: 2vw;
+  font-size: 1em;
 }
 
 
 #log {
   font-family: JetBrains;
 } #logTitle {
-  font-size: 4vw;
+  font-size: 2em;
 } #logtext {
-  font-size: 2vw;
+  font-size: 1em;
 }
