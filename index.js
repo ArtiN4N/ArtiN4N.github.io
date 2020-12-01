@@ -23,17 +23,21 @@ let months = {
   "Dec": "December",
 };
 
-var fullDate = new Date().toString();
-var weekDay = dates[fullDate.substr(0, 3)];
-var monthDay = months[fullDate.substr(4, 3)];
-var numberDay = fullDate.substr(8, 2);
-var yearDay = fullDate.substr(11, 4);
-var time = fullDate.substr(16, 8);
+function updateTime() {
+  var fullDate = new Date().toString();
+  var weekDay = dates[fullDate.substr(0, 3)];
+  var monthDay = months[fullDate.substr(4, 3)];
+  var numberDay = fullDate.substr(8, 2);
+  var yearDay = fullDate.substr(11, 4);
+  var time = fullDate.substr(16, 8);
 
-let dateTimeDate = weekDay + " " + monthDay + " " + numberDay + " " + yearDay;
-let dateTimeTime = time;
+  let dateTimeDate = weekDay + " " + monthDay + " " + numberDay + " " + yearDay;
+  let dateTimeTime = time;
 
-console.log(typeof(dateTimeDate));
+  $('#dateTimeDate').text(dateTimeDate);
+  $('#dateTimeTime').text(dateTimeTime);
+  
+  setTimeout(updateTime, 1000);
+}
 
-$('#dateTimeDate').text(dateTimeDate);
-$('#dateTimeTime').text(dateTimeTime);
+updateTime();
