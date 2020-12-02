@@ -3,7 +3,10 @@
   src: url(fonts/jetbrains/web/woff2/JetBrainsMono-Regular.woff2);
 }
 
-body {
+html {
+  background-color: #181a1b;
+  color: #e8e6e3;
+} body {
   position: absolute;
   top: 10px;
 }
