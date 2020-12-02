@@ -8,7 +8,7 @@ html {
   color: #e8e6e3;
 } body {
   position: absolute;
-  top: 10px;
+  top: 20px;
 } a {
   color: #3391FF;
 }
@@ -106,6 +106,7 @@ html {
 } #todoTitle {
   font-size: 2em;
   position: relative;
+  margin-bottom: 20px;
 } #todoBoxes {
   position: relative;
 } #todoText {
