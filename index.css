@@ -3,13 +3,16 @@
   src: url(fonts/jetbrains/web/woff2/JetBrainsMono-Regular.woff2);
 }
 
-.divider {
-  position: relative;
+body {
+  position: absolute;
+  top: 10px;
 }
+
 
 #pEntries {
   font-family: JetBrains;
   position: relative;
+  padding: 20px;
   font-size: 1em;
 }
 
@@ -17,9 +20,11 @@
 #dateTime {
   font-family: JetBrains;
   position: relative;
+  padding: 20px;
 } #dateTimeDate {
   font-size: 4em;
   position: relative;
+  margin-bottom: 5px;
 } #dateTimeTime {
   font-size: 3em;
   position: relative;
@@ -29,6 +34,7 @@
 #todo {
   font-family: JetBrains;
   position: relative;
+  padding: 20px;
 } #todoTitle {
   font-size: 2em;
   position: relative;
@@ -43,6 +49,7 @@
 #log {
   font-family: JetBrains;
   position: relative;
+  padding: 20px;
 } #logTitle {
   font-size: 2em;
   position: relative;
