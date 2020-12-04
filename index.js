@@ -40,8 +40,10 @@ function updateTime() {
   setTimeout(updateTime, 1000);
 }
 
+var id = 0
 function addTodo() {
-  let todo = "<input class='todoBoxes' type='text' placeholder='Write Here...'><button class='todoBoxButton' type='button' onclick='addTodo'></button>";
+  let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...'><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
+  id++;
   $('#todo').append(todo);
 }
 
