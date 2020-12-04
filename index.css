@@ -148,7 +148,10 @@ html {
   left: 35px;
   top: 26px;
   font-family: 'JetBrains';
-} .todoBoxesCheckmark {
+} .todoBoxDiv {
+  height: 0px;
+  width: 0px;
+}.todoBoxesCheckmark {
   position: absolute;
   top: 105px;
   left: 20px;
