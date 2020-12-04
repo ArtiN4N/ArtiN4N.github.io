@@ -112,6 +112,15 @@ html {
 } #todoText {
   font-size: 1em;
   position: relative;
+} .todoAddButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #2A2C28;
+} .todoAddButton:hover {
+  background-color: #3D3F3A;
 }
 
 
