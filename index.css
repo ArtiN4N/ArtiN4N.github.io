@@ -119,7 +119,7 @@ html {
   outline: none;
   box-shadow: none;
 } .todoBoxButton {
-  position: absolute;
+  position: relative;
   padding: 0;
   border: none;
   top: 0px;
