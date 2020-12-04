@@ -114,6 +114,8 @@ html {
   position: relative;
 } .todoAddButton {
   position: absolute;
+  padding: 0;
+  border: none;
   top: 0;
   left: 0;
   height: 25px;
@@ -121,6 +123,9 @@ html {
   background-color: #2A2C28;
 } .todoAddButton:hover {
   background-color: #3D3F3A;
+} .todoAddButton:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 
