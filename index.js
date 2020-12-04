@@ -41,7 +41,7 @@ function updateTime() {
 }
 
 function addTodo() {
-  let todo = "<input class="todoBoxes" type="text" placeholder="Write Here..."><button class="todoBoxButton" type="button" onclick="addTodo"></button>";
+  let todo = "<input class='todoBoxes' type='text' placeholder='Write Here...'><button class='todoBoxButton' type='button' onclick='addTodo'></button>";
   $('#todo').append(todo);
 }
 
