@@ -23,6 +23,14 @@ let months = {
   "Dec": "December",
 };
 
+class todo {
+  constructor(id) {
+    this.completed = false;
+    this.text = '';
+    this.id = id;
+  }
+}
+
 function updateTime() {
   var fullDate = new Date().toString();
   var weekDay = dates[fullDate.substr(0, 3)];
@@ -40,12 +48,27 @@ function updateTime() {
   setTimeout(updateTime, 1000);
 }
 
-var id = 0
+var todoTempList = [];
+var todoPermList = [];
+
+var id = 0;
 function addTodo() {
+  const todoItem = new todo(id);
+  todoTempList.push(todoItem);
   let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
   $('#todo').append(todo);
-  $("#tB" + id + "").focus();
+  $('#tB' + id + '').focus();
   id++;
 }
 
 updateTime();
+
+$('html' ).mousedown(function() {
+  for(let i of todoTempList) {
+    i.text = document.getElementById('tB' + id + '').value;
+    if (!($('#tB' + i.id + '').is(":focus")) && i.text != "") {
+      $('#tB' + id + '').remove();
+      $('#tBB' + id + '').remove();
+    }
+  }
+});
