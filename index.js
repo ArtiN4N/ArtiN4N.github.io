@@ -23,7 +23,7 @@ let months = {
   "Dec": "December",
 };
 
-class todo {
+class TodoItems {
   constructor(id) {
     this.completed = false;
     this.text = '';
@@ -53,7 +53,7 @@ var todoPermList = [];
 
 var id = 0;
 function addTodo() {
-  const todoItem = new todo(id);
+  var todoItem = new TodoItems(id);
   todoTempList.push(todoItem);
   let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
   $('#todo').append(todo);
