@@ -65,10 +65,10 @@ updateTime();
 
 $('html' ).mousedown(function() {
   for(let i of todoTempList) {
-    i.text = document.getElementById('tB' + id + '').value;
+    i.text = ($('#tB' + i.id + '').val());
     if (!($('#tB' + i.id + '').is(":focus")) && i.text != "") {
-      $('#tB' + id + '').remove();
-      $('#tBB' + id + '').remove();
+      $('#tB' + i.id + '').remove();
+      $('#tBB' + i.id + '').remove();
     }
   }
 });
