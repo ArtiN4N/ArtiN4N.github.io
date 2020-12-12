@@ -65,7 +65,7 @@ function addTodo() {
   if (todoTempList.length == 0) {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
-    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
+    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodo(" + id + ")'></button>";
     $('#todo').append(todo);
     $('#tB' + id + '').focus();
     id++;
