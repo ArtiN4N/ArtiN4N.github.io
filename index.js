@@ -64,7 +64,7 @@ function addTodo() {
 }
 
 updateTime();
-
+/*
 $('html' ).mousedown(function() {
   console.log($(':focus'));
   for(let i of todoTempList) {
@@ -79,3 +79,4 @@ $('html' ).mousedown(function() {
     }
   }
 });
+*/
