@@ -119,6 +119,20 @@ html {
 } #todoAddText {
   position: relative;
   top: 3px;
+} .todoRemoveButton {
+  position: relative;
+  padding: 0;
+  border: none;
+  top: 0px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: #2A2C28;
+} .todoRemoveButton:hover {
+  background-color: #3D3F3A;
+} .todoRemoveButton:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 
