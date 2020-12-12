@@ -53,12 +53,14 @@ var todoPermList = [];
 
 var id = 0;
 function addTodo() {
-  var todoItem = new TodoItems(id);
-  todoTempList.push(todoItem);
-  let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
-  $('#todo').append(todo);
-  $('#tB' + id + '').focus();
-  id++;
+  if (todoTempList.length == 0) {
+    var todoItem = new TodoItems(id);
+    todoTempList.push(todoItem);
+    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button>";
+    $('#todo').append(todo);
+    $('#tB' + id + '').focus();
+    id++;
+  }
 }
 
 updateTime();
