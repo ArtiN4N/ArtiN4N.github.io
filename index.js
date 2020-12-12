@@ -53,10 +53,14 @@ var todoPermList = [];
 
 var id = 0;
 function addTodo() {
-  todoTempList[0].text = ($('#tB' + todoTempList[0].id + '').val());
-  if (todoTempList[0].text != "") {
-    todoPermList.push(todoTempList[0]);
-    todoTempList = [];
+  try {
+    todoTempList[0].text = ($('#tB' + todoTempList[0].id + '').val());
+    if (todoTempList[0].text != "") {
+      todoPermList.push(todoTempList[0]);
+      todoTempList = [];
+    }
+  } catch(err) {
+    console.log(err);
   }
   if (todoTempList.length == 0) {
     var todoItem = new TodoItems(id);
