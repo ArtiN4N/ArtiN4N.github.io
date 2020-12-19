@@ -73,6 +73,20 @@ function addTodo() {
   }
 }
 
+function removeTodoByID(id) {
+  try {
+    if (todoTempList[0].id == id) {
+      todoTempList = [];
+    }
+  }
+  catch(err) {
+    console.log(err);
+  } 
+  $('#tB' + id + '').remove();
+  $('#tBB' + id + '').remove();
+  $('#tRB' + id + '').remove();
+}
+
 updateTime();
 /*
 $('html' ).mousedown(function() {
