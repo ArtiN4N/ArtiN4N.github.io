@@ -67,7 +67,7 @@ function addTodo() {
   if (todoTempList.length == 0) {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
-    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput()'/><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
+    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput(" + id + ")'/><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
     $('#tRB' + id + '').css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
     $('#todo').append(todo);
     $('#tB' + id + '').focus();
@@ -91,7 +91,7 @@ function removeTodoByID(id) {
 }
 
 updateTime();
-
+/*
 function changedInput() {
   for (input in todoPermList) {
     console.log((input, input.id, input.text));
@@ -99,7 +99,7 @@ function changedInput() {
     $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
 }
-/*
+
 $("input.todoBoxes").change(function(){
   for (input in todoPermList) {
     console.log((input, input.id, input.text));
@@ -107,5 +107,24 @@ $("input.todoBoxes").change(function(){
     $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
 });*/
+
+function changedInput(id) {
+  let obj = null;
+  if (id > 0) {
+    for (i = 0; i < todoPermList.length; i++) {
+      if (id == todoPermList[i].id) {
+        obj = todoPermList[i];
+      }
+    }
+  } else {
+    obj = todoTempList[0];
+  }
+  todoPlaceholders(obj);
+}
+
+function todoPlaceholders(obj) {
+  $('#tIT' + obj.id).text(obj.text);
+  $('#tRB' + obj.id).css("left",($('#tIT' + obj.id).width() + 20) + "px");
+}
 
 
