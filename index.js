@@ -66,7 +66,7 @@ function addTodo() {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
     let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false'/><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
-    $('#tRB' + id + '').css("left","" + ($("#tIT" + id + "").length + 20) + "px");
+    $('#tRB' + id + '').css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
     $('#todo').append(todo);
     $('#tB' + id + '').focus();
     id++;
@@ -92,7 +92,7 @@ updateTime();
 $("input").change(function(){
   for (input in todoPermList) {
     $('#tIT' + input.id + '').text(input.text)
-    $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").length + 20) + "px");
+    $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
 });
 /*
