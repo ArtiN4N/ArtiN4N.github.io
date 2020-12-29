@@ -95,19 +95,4 @@ $("input").change(function(){
     $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
 });
-/*
-$('html' ).mousedown(function() {
-  console.log($(':focus'));
-  for(let i of todoTempList) {
-    i.text = ($('#tB' + i.id + '').val());
-    if (!($('#tB' + i.id + '').is(":focus")) && i.text == "") {
-      $('#tB' + i.id + '').remove();
-      $('#tBB' + i.id + '').remove();
-      todoTempList.splice(i.id, 1);
-    } else if (i.text != "") {
-      todoPermList.push(i);
-      todoTempList.splice(i.id, 1);
-    }
-  }
-});
-*/
+
