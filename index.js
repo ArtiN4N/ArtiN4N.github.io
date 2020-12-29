@@ -90,10 +90,10 @@ function removeTodoByID(id) {
 
 updateTime();
 
-$("input").change(function(){
+$("input.todoBoxes").change(function(){
   for (input in todoPermList) {
     console.log((input, input.id, input.text));
-    $('#tIT' + input.id + '').text(input.text)
+    $('#tIT' + input.id + '').text(input.text);
     $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
 });
