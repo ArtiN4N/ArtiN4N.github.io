@@ -68,10 +68,10 @@ function addTodo() {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
     let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput(" + id + ")'/><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
+    todoTempList[0].text = ($('#tB' + id).val());
     $('#tRB' + id).css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
     $('#todo').append(todo);
     $('#tB' + id).focus();
-    todoTempList[0].text = ($('#tB' + id).val());
     id++;
   }
 }
