@@ -1,3 +1,4 @@
+//Converts JS's date/time into readable stuff
 let dates = {
   "Mon": "Monday",
   "Tue": "Tuesday",
@@ -7,7 +8,7 @@ let dates = {
   "Sat": "Saturday",
   "Sun": "Sunday",
 };
-
+//Converts JS's date/time into readable stuff
 let months = {
   "Jan": "January",
   "Feb": "Febuary",
@@ -22,7 +23,7 @@ let months = {
   "Nov": "November",
   "Dec": "December",
 };
-
+// The checkbox thingys
 class TodoItems {
   constructor(id) {
     this.completed = false;
@@ -30,9 +31,10 @@ class TodoItems {
     this.id = id;
   }
 }
-
+//Takes JS's date/time and converts it into a readable string
 function updateTime() {
   var fullDate = new Date().toString();
+  //0, 3, and others in following lines denote the spot in the fullDate string where the desired data is located. For example, weekday starts at index 0 and is 3 letters long
   var weekDay = dates[fullDate.substr(0, 3)];
   var monthDay = months[fullDate.substr(4, 3)];
   var numberDay = fullDate.substr(8, 2);
