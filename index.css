@@ -133,6 +133,19 @@ html {
 } .todoRemoveButton:focus {
   outline: none;
   box-shadow: none;
+} .todoIndentText {
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #e8e6e3;
+  left: 55px;
+  font-family: 'JetBrains';
 }
 
 
