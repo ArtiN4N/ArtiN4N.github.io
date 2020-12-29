@@ -85,12 +85,14 @@ function removeTodoByID(id) {
   $('#tB' + id + '').remove();
   $('#tBB' + id + '').remove();
   $('#tRB' + id + '').remove();
+  $('#tIT' + id + '').remove();
 }
 
 updateTime();
 
 $("input").change(function(){
   for (input in todoPermList) {
+    console.log((input, input.id, input.text));
     $('#tIT' + input.id + '').text(input.text)
     $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
   }
