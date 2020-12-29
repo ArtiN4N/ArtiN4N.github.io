@@ -109,15 +109,11 @@ $("input.todoBoxes").change(function(){
 });*/
 
 function changedInput(id) {
-  let obj = null;
-  if (id > 0) {
-    for (i = 0; i < todoPermList.length; i++) {
-      if (id == todoPermList[i].id) {
-        obj = todoPermList[i];
-      }
+  let obj = todoTempList[0];
+  for (i = 0; i < todoPermList.length; i++) {
+    if (id == todoPermList[i].id) {
+      obj = todoPermList[i];
     }
-  } else {
-    obj = todoTempList[0];
   }
   todoPlaceholders(obj);
 }
