@@ -68,9 +68,10 @@ function addTodo() {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
     let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput(" + id + ")'/><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='addTodo'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
-    $('#tRB' + id + '').css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
+    $('#tRB' + id).css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
     $('#todo').append(todo);
-    $('#tB' + id + '').focus();
+    $('#tB' + id).focus();
+    todoTempList[0].text = ($('#tB' + id).val());
     id++;
   }
 }
@@ -91,22 +92,6 @@ function removeTodoByID(id) {
 }
 
 updateTime();
-/*
-function changedInput() {
-  for (input in todoPermList) {
-    console.log((input, input.id, input.text));
-    $('#tIT' + input.id + '').text(input.text);
-    $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
-  }
-}
-
-$("input.todoBoxes").change(function(){
-  for (input in todoPermList) {
-    console.log((input, input.id, input.text));
-    $('#tIT' + input.id + '').text(input.text);
-    $('#tRB' + input.id + '').css("left","" + ($("#tIT" + input.id + "").width() + 20) + "px");
-  }
-});*/
 
 function changedInput(id) {
   let obj = todoTempList[0];
@@ -115,12 +100,14 @@ function changedInput(id) {
       obj = todoPermList[i];
     }
   }
+
+  obj.text = ($('#tB' + id).val());
+
   todoPlaceholders(obj);
 }
 
 function todoPlaceholders(obj) {
+  console.log(obj.text);
   $('#tIT' + obj.id).text(obj.text);
   $('#tRB' + obj.id).css("left",($('#tIT' + obj.id).width() + 20) + "px");
 }
-
-
