@@ -111,5 +111,11 @@ function changedInput(id) {
 
 function todoPlaceholders(obj) {
   $('#tIT' + obj.id).text(obj.text);
-  $('#tRB' + obj.id).css("left",($('#tIT' + obj.id).width() + 20) + "px");
+  let len = ($('#tIT' + obj.id).width() + 20);
+  if (len < 190) {
+    len = 190;
+  } else if (len > 323) {
+    len = 323;
+  }
+  $('#tRB' + obj.id).css("left", len + "px");
 }
