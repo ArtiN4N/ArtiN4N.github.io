@@ -110,7 +110,6 @@ function changedInput(id) {
 }
 
 function todoPlaceholders(obj) {
-  console.log(obj.text);
   $('#tIT' + obj.id).text(obj.text);
   $('#tRB' + obj.id).css("left",($('#tIT' + obj.id).width() + 20) + "px");
 }
