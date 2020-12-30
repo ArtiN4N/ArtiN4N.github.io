@@ -5,12 +5,12 @@
 
 html {
   background-color: #181a1b;
-  color: #e8e6e3;
+  color: #EFF1F3;
 } body {
   position: absolute;
   top: 20px;
 } a {
-  color: #9ad3bc;
+  color: #ACFCD9;
 }
 
 
@@ -30,9 +30,11 @@ html {
   font-size: 4em;
   position: relative;
   margin-bottom: 5px;
+  color: #009FB7;
 } #dateTimeTime {
   font-size: 3em;
   position: relative;
+  color: #FED766;
 }
 
 
@@ -44,7 +46,7 @@ html {
   font-size: 2em;
   position: relative;
   margin-bottom: 20px;
-  color: #ec524b;
+  color: #009FB7;;
 } #todoBoxes {
   position: relative;
 } #todoText {
@@ -58,7 +60,7 @@ html {
   cursor: pointer;
   font-size: 22px;
   user-select: none;
-  color: #f5b461;
+  color: #FED766;
 } #todoAddButton {
   position: absolute;
   padding: 0;
@@ -99,7 +101,7 @@ html {
   background-color: #181a1b;
   padding: 0;
   margin: 0;
-  color: #e8e6e3;
+  color: #EFF1F3;
   left: 35px;
   top: 26px;
   font-family: 'JetBrains';
