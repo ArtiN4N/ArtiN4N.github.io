@@ -100,7 +100,10 @@ function changedInput(id) {
       obj = todoPermList[i];
     }
   }
-
+  if (obj == todoTempList[0] && obj.text != '') {
+    todoPermList.push(todoTempList[0]);
+    todoTempList = [];
+  }
   obj.text = ($('#tB' + id).val());
 
   todoPlaceholders(obj);
