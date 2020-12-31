@@ -148,6 +148,19 @@ html {
   color: #e8e6e3;
   left: 55px;
   font-family: 'JetBrains';
+} .checkimg {
+  width: 15px;
+  position: absolute;
+  z-index: 9;
+  margin-left: 5px;
+  margin-top: 5px;
+} .eximg {
+  width: 15px;
+  position: absolute;
+  left: 235px;
+  z-index: 9;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 
