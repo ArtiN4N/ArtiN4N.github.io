@@ -94,7 +94,17 @@ function removeTodoByID(id) {
 updateTime();
 
 function checked(id) {
-  $('#cBI' + id).css("visibility","visible");
+  let obj = todoTempList[0];
+  for (i = 0; i < todoPermList.length; i++) {
+    if (id == todoPermList[i].id) {
+      obj = todoPermList[i];
+    }
+  }
+  if (obj.completed) {
+    $('#cBI' + id).css("visibility","hidden");
+  } else {
+    $('#cBI' + id).css("visibility","visible");
+  }
 }
 
 function changedInput(id) {
