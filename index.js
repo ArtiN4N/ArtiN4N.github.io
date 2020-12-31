@@ -67,7 +67,7 @@ function addTodo() {
   if (todoTempList.length == 0) {
     var todoItem = new TodoItems(id);
     todoTempList.push(todoItem);
-    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput(" + id + ")'/><img src='check.png' class='checkimg' id='cBI" + id + "'><img src='ex.png' class='eximg'><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='checked(" + id + ")'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
+    let todo = "<input id='tB" + id + "' class='todoBoxes' type='text' placeholder='Write Here...' spellcheck='false' oninput='changedInput(" + id + ")'/><img src='check.png' class='checkimg' id='cBI" + id + "'><img src='ex.png' class='eximg' id='cBX" + id + "'><p id='tIT" + id + "' class='todoIndentText'>Write Here...</p><button id='tBB" + id + "' class='todoBoxButton' type='button' onclick='checked(" + id + ")'></button><button id='tRB" + id + "' class='todoRemoveButton' type='button' onclick='removeTodoByID(" + id + ")'></button>";
     todoTempList[0].text = ($('#tB' + id).val());
     $('#tRB' + id).css("left","" + ($("#tIT" + id + "").width() + 20) + "px");
     $('#todo').append(todo);
@@ -85,10 +85,12 @@ function removeTodoByID(id) {
   catch(err) {
     console.log(err);
   } 
-  $('#tB' + id + '').remove();
-  $('#tBB' + id + '').remove();
-  $('#tRB' + id + '').remove();
-  $('#tIT' + id + '').remove();
+  $('#tB' + id).remove();
+  $('#tBB' + id).remove();
+  $('#tRB' + id).remove();
+  $('#tIT' + id).remove();
+  $('#cBI' + id).remove();
+  $('#cBX' + id).remove();
 }
 
 updateTime();
@@ -101,8 +103,10 @@ function checked(id) {
     }
   }
   if (obj.completed) {
+    obj.completed = false;
     $('#cBI' + id).css("visibility","hidden");
   } else {
+    obj.completed = true;
     $('#cBI' + id).css("visibility","visible");
   }
 }
