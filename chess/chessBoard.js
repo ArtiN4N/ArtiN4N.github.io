@@ -27,7 +27,7 @@ function tile(w, h, white, x, y) {
   this.height = h;
   this.x = x;
   this.y = y;
-  this.c = 1;
+  this.c = 100;
   this.color = "rgb(0, 0, 0)";
   if (white) {
     this.color = "rgb(255, 255, 255)"
