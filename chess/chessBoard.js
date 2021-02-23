@@ -49,7 +49,7 @@ function piece(x, y, color, iX, iY) {
   
   
   this.draw = function() {
-    print("yo");
+    alert("yo");
     let newTile = chessBoard.context;
     newTile.drawImage(this.source, this.indexX * this.spriteCX, this.indexY * this.spriteCY, this.spriteCX, this.spriteCY, this.x * this.c, this.y * this.c, (size/8), (size/8));
   }
