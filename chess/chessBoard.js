@@ -11,8 +11,8 @@ var chessBoard = {
     this.context = this.canvas.getContext("2d");
   },
   create: function() {
-    for (int i = 0; i < 8; i++) {
-      for (int o = 0; o < 8; o++) {
+    for (i = 0; i < 8; i++) {
+      for (o = 0; o < 8; o++) {
         let white = (i+o % 2 == 0);
         let color = "rgb(0, 0, 0)";
         if (white) {
