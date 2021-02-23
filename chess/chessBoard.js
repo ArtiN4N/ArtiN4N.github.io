@@ -17,6 +17,7 @@ var chessBoard = {
           t = new tile(o, i);
           t.draw();
           p = new piece(0, 0, true, 0, 0);
+          p.draw;
         }
       }
     }
@@ -39,7 +40,7 @@ function piece(x, y, color, iX, iY) {
   this.y = y;
   this.color = color;
   this.source = new Image();
-  this.source.src = 'Pieces.png'
+  this.source.src = 'Pieces.png';
   this.c = (size/8);
   this.spriteCX = 333.33;
   this.spriteCY = 333.33;
