@@ -16,7 +16,7 @@ var chessBoard = {
         if ((i+o) % 2 != 0) {
           t = new tile(o, i);
           t.draw();
-          p = new piece(0, 0, true, 0, 0);
+          p = new piece(1, 1, true, 1, 1);
           p.draw();
         }
       }
