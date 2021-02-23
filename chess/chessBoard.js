@@ -14,8 +14,8 @@ var chessBoard = {
     for (i = 0; i < 8; i++) {
       for (o = 0; o < 8; o++) {
         if ((i+o) % 2 != 0) {
-          t = new tile(o, i);
-          t.draw();
+          //t = new tile(o, i);
+          //t.draw();
           p = new piece(1, 1, true, 1, 1);
           p.draw();
         }
