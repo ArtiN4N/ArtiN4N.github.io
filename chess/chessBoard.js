@@ -2,6 +2,7 @@ var size = 800;
 
 function startChess() {
   chessBoard.start();
+  chessBoard.draw();
 }
 
 var chessBoard = {
@@ -10,17 +11,21 @@ var chessBoard = {
     this.canvas.width = size;
     this.canvas.height = size;
     this.context = this.canvas.getContext("2d");
+    this.game = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+  },
+  draw: function() {
     for (i = 0; i < 8; i++) {
       for (o = 0; o < 8; o++) {
         if ((i+o) % 2 != 0) {
           t = new tile(o, i);
           t.draw();
-          p = new piece(1, 1, true, 1, 1);
-          p.draw();
         }
       }
     }
+    
+    p = new piece(1, 1, true, 1, 1);
+    p.draw();
   }
 }
 
