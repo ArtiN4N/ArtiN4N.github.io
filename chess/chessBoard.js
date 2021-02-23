@@ -32,3 +32,22 @@ function tile(x, y) {
     newTile.fillRect(this.x * this.c, this.y * this.c, (size/8), (size/8));
   }
 }
+
+function piece(x, y, color, source, iX, iY) {
+  this.x = x;
+  this.y = y;
+  this.color = color;
+  this.source = source;
+  this.c = (size/8);
+  this.spriteCX = 9;
+  this.spriteCY = 9;
+  this.indexX = iX;
+  this.indexY = iY;
+  
+  
+  this.draw = function() {
+    let newTile = chessBoard.context;
+    newTile.drawImage(this.source, this.indexX * this.spriteCX, this.indexY * this.spriteCY, this.spriteCX, this.spriteCY, this.x * this.c, this.y * this.c, (size/8), (size/8));
+  }
+}
+
