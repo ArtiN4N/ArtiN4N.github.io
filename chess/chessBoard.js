@@ -15,11 +15,7 @@ var chessBoard = {
     for (i = 0; i < 8; i++) {
       for (o = 0; o < 8; o++) {
         let white = (i+o % 2 == 0);
-        let color = "rgb(0, 0, 0)";
-        if (white) {
-          color = "rgb(255, 255, 255)";
-        }
-        t = new tile(100, 100, color, o, i);
+        t = new tile(100, 100, white, o, i);
         t.draw();
       }
     }
