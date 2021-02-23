@@ -14,8 +14,8 @@ var chessBoard = {
     for (i = 0; i < 8; i++) {
       for (o = 0; o < 8; o++) {
         if ((i+o) % 2 != 0) {
-          //t = new tile(o, i);
-          //t.draw();
+          t = new tile(o, i);
+          t.draw();
           p = new piece(1, 1, true, 1, 1);
           p.draw();
         }
@@ -49,8 +49,9 @@ function piece(x, y, color, iX, iY) {
   
   
   this.draw = function() {
+    print("yo");
     let newTile = chessBoard.context;
-    newTile.drawImage(this.source, /*this.indexX * this.spriteCX, this.indexY * this.spriteCY, this.spriteCX, this.spriteCY, this.x * this.c, this.y * this.c, */(size/8), (size/8));
+    newTile.drawImage(this.source, this.indexX * this.spriteCX, this.indexY * this.spriteCY, this.spriteCX, this.spriteCY, this.x * this.c, this.y * this.c, (size/8), (size/8));
   }
 }
 
