@@ -16,6 +16,7 @@ var chessBoard = {
         if ((i+o) % 2 != 0) {
           t = new tile(o, i);
           t.draw();
+          p = new piece(0, 0, true, 0, 0);
         }
       }
     }
@@ -33,14 +34,15 @@ function tile(x, y) {
   }
 }
 
-function piece(x, y, color, source, iX, iY) {
+function piece(x, y, color, iX, iY) {
   this.x = x;
   this.y = y;
   this.color = color;
-  this.source = source;
+  this.source = new Image();
+  this.source.src = 'Pieces.png'
   this.c = (size/8);
-  this.spriteCX = 9;
-  this.spriteCY = 9;
+  this.spriteCX = 333.33;
+  this.spriteCY = 333.33;
   this.indexX = iX;
   this.indexY = iY;
   
