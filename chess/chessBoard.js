@@ -18,28 +18,34 @@ var chessBoard = {
     for (i = 0; i < 8; i++) {
       for (o = 0; o < 8; o++) {
         if ((i+o) % 2 != 0) {
-          t = new tile(o, i);
-          t.draw();
+          chessBoard.context.fillStyle = "rgb(0, 0, 0)";
+          chessBoard.context.fillRect(o * (size/8), i * (size/8), (size/8), (size/8));
         }
       }
     }
     
-    p = new piece(1, 1, true, 1, 1);
+    p = new Piece(1, 66);
     p.draw();
   }
 }
+class Piece {
+  constructor(value, loc) {
+    this.source = new Image();
+    this.source.src = 'Pieces.png';
 
-function tile(x, y) {
-  this.x = x;
-  this.y = y;
-  this.c = (size/8);
-  this.draw = function() {
+    this.piece_value = value;
+    this.piece_location = loc;
+  }
+  
+  
+  draw() {
     let newTile = chessBoard.context;
-    newTile.fillStyle = "rgb(0, 0, 0)";
-    newTile.fillRect(this.x * this.c, this.y * this.c, (size/8), (size/8));
+    let newLoc = (this.piece_location + (this.piece_location & 7)) >> 1;
+    console.log(newLoc);
+    newTile.drawImage(this.source, 4 * 333.33, 4 * 333.33, 333.33, 333.33, 4 * (size/8), 4 * (size/8), (size/8), (size/8));
   }
 }
-
+/*
 function piece(x, y, color, iX, iY) {
   this.x = x;
   this.y = y;
@@ -59,4 +65,4 @@ function piece(x, y, color, iX, iY) {
     newTile.drawImage(this.source, this.indexX * this.spriteCX, this.indexY * this.spriteCY, this.spriteCX, this.spriteCY, this.x * this.c, this.y * this.c, (size/8), (size/8));
   }
 }
-
+*/
