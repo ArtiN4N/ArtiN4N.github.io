@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="UI.css">
+</head>
+<body>
+<script src="chessUI.js" type="text/javascript"></script>
+<script src="graphics.js" type="text/javascript"></script>
+<script src="genMoves.js" type="text/javascript"></script>
+<script src="endGame.js" type="text/javascript"></script>
+<script src="chess.js" type="text/javascript"></script>
+<div id="titleScreen">
+    <p id="title">ARTINAN<i>ai</i></p>
+
+    <p id="flavour">Play the AI:</p>
+    <div id="colors" class="buttonContainers">
+        <button id="white" onclick="clickOption()">White</button>
+        <button id="black" onclick="clickOption(false)">Black</button>
+    </div>
+
+    <div id="times" class="buttonContainers">
+        <button onclick="clickTime(1)">1:00</button>
+        <button onclick="clickTime(3)">3:00</button>
+        <button onclick="clickTime(5)">5:00</button>
+        <button onclick="clickTime(10)">10:00</button>
+        <button onclick="clickTime(30)">30:00</button>
+    </div>
+</div>
+</body>
+</html>
