@@ -1,5 +1,5 @@
 let jumpKey = false;
-let leftkey = false;
+let leftKey = false;
 let rightKey = false;
 
 let x = 50.0;
