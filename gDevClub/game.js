@@ -1,21 +1,7 @@
-let canvas = {
-    canvas: document.createElement("canvas"),
-    start: function () {
-        this.canvas.width = 800;
-        this.canvas.height = 800;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-
-        this.coinInterval = 0;
-        this.game = setInterval(game, 20);
-    },
-    stop : function() {
-        clearInterval(this.game);
-    }
-}
-
 let x = 50.0;
 let y = 50.0;
+
+let onGround = false;
 
 let score = 0;
 
@@ -25,15 +11,18 @@ let coinY = 0.0;
 let xVel = 0.0;
 let yVel = 0.0;
 
-const playerColor = "rgb(118,150,86)";
-const screenColor = "rgb(0,0,0)";
-const coinColor = "rgb(221,175,12)";
-const textColor = "rgba(255,255,255, 0.5)";
 
 function game() {
     canvas.coinInterval++;
 
     x += xVel;
+    
+    if (!onGround) {
+        yVel += 10;
+    } else {
+        yVel = 0;
+    }
+    
     y += yVel;
 
     if ((x + 100 > coinX && x < coinX + 20) && (y + 100 > coinY && y < coinY + 20)) {
@@ -83,41 +72,3 @@ function updateCoin() {
         updateCoin();
     }
 }
-
-window.addEventListener("keydown", function(event) {
-    switch(event.code) {
-        case "KeyS":
-        case "ArrowDown":
-            yVel = 10.0;
-            break;
-        case "KeyW":
-        case "ArrowUp":
-            yVel = -10.0;
-            break;
-        case "KeyA":
-        case "ArrowLeft":
-            xVel = -10.0;
-            break;
-        case "KeyD":
-        case "ArrowRight":
-            xVel = 10.0;
-            break;
-    }
-}, true);
-
-window.addEventListener("keyup", function(event) {
-    switch(event.code) {
-        case "KeyS":
-        case "ArrowDown":
-        case "KeyW":
-        case "ArrowUp":
-            yVel = 0.0;
-            break;
-        case "KeyA":
-        case "ArrowLeft":
-        case "KeyD":
-        case "ArrowRight":
-            xVel = 0.0;
-            break;
-    }
-}, true);
