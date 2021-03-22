@@ -14,12 +14,33 @@ let yVel = 0.0;
 
 function game() {
     canvas.coinInterval++;
-
+    
+    if (rightKey || leftKey) {
+        if (rightKey) {
+            xVel += 10; 
+        }
+        if (leftKey) {
+            xVel -= 10;
+        }
+    } else {
+        xVel = 0;
+    }
+        
     x += xVel;
     
-    if (!onGround) {
-        yVel += 10;
+    if (y >= 700) {
+        onGround = true;
     } else {
+        onGround = false;
+    }
+    
+    if (!onGround) {
+        yVel += 1;
+    } else {
+        if (jumpKey) {
+            onGround = false;
+            yVel = 12;
+        }
         yVel = 0;
     }
     
