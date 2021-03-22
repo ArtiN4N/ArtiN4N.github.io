@@ -108,12 +108,11 @@ window.addEventListener("keydown", function(event) {
     switch(event.code) {
         case "KeyW":
         case "ArrowUp":
-            console.log("key down");
             jumpKey = true;
             break;
         case "KeyA":
         case "ArrowLeft":
-            leftkey = true;
+            leftKey = true;
             break;
         case "KeyD":
         case "ArrowRight":
@@ -126,8 +125,7 @@ window.addEventListener("keyup", function(event) {
     switch(event.code) {
         case "KeyW":
         case "ArrowUp":
-            console.log("key up");
-            jumpkey = false;
+            jumpKey = false;
             break;
         case "KeyA":
         case "ArrowLeft":
