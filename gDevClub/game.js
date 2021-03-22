@@ -24,6 +24,7 @@ function game() {
             xVel += 10; 
         }
         if (leftKey) {
+            console.log("hi");
             xVel -= 10;
         }
     } else {
