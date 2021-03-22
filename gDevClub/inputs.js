@@ -1,37 +1,37 @@
+let jumpKey = false;
+let leftkey = false;
+let rightKey = false;
+
 window.addEventListener("keydown", function(event) {
     switch(event.code) {
-        case "KeyS":
-        case "ArrowDown":
-            yVel = 10.0;
-            break;
         case "KeyW":
         case "ArrowUp":
-            yVel = -10.0;
+            jumpKey = true;
             break;
         case "KeyA":
         case "ArrowLeft":
-            xVel = -10.0;
+            leftkey = true;
             break;
         case "KeyD":
         case "ArrowRight":
-            xVel = 10.0;
+            rightKey = true;
             break;
     }
 }, true);
 
 window.addEventListener("keyup", function(event) {
     switch(event.code) {
-        case "KeyS":
-        case "ArrowDown":
         case "KeyW":
         case "ArrowUp":
-            yVel = 0.0;
+            jumpkey = false;
             break;
         case "KeyA":
         case "ArrowLeft":
+            leftKey = false;
+            break;
         case "KeyD":
         case "ArrowRight":
-            xVel = 0.0;
+            rightKey = false;
             break;
     }
 }, true);
