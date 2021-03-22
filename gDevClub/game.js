@@ -19,11 +19,9 @@ let yVel = 0.0;
 function game() {
     canvas.coinInterval++;
     
-    if (jumpKey) {
-        if (onGround) {
-            onGround = false;
-            yVel = -30;
-        }
+    if (jumpKey && onGround) {
+        onGround = false;
+        yVel = -30;
     }
     
     if (rightKey || leftKey) {
@@ -31,7 +29,6 @@ function game() {
             xVel += 10; 
         }
         if (leftKey) {
-            console.log("hi");
             xVel -= 10;
         }
     } else {
@@ -42,12 +39,6 @@ function game() {
     
     xVel = 0;
     
-    if (y >= 700) {
-        onGround = true;
-    } else {
-        onGround = false;
-    }
-    
     if (!onGround) {
         yVel += 1;
     } else {
@@ -55,7 +46,7 @@ function game() {
     }
     
     y += yVel;
-
+    
     if ((x + 100 > coinX && x < coinX + 20) && (y + 100 > coinY && y < coinY + 20)) {
         score++;
         canvas.coinInterval = 0;
@@ -77,6 +68,7 @@ function game() {
         y = 0.0;
     } else if (y > 700.0) {
         y = 700.0;
+        onGround = true;
     }
 
     let ctx = canvas.context;
