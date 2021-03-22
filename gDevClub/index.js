@@ -17,6 +17,8 @@ let canvas = {
 let x = 50.0;
 let y = 50.0;
 
+let onGround = false;
+
 let score = 0;
 
 let coinX = 0.0;
@@ -34,6 +36,13 @@ function game() {
     canvas.coinInterval++;
 
     x += xVel;
+    
+    if (!onGround) {
+        yVel += 10;
+    } else {
+        yVel = 0;
+    }
+    
     y += yVel;
 
     if ((x + 100 > coinX && x < coinX + 20) && (y + 100 > coinY && y < coinY + 20)) {
