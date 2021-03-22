@@ -32,6 +32,8 @@ function game() {
         
     x += xVel;
     
+    xVel = 0;
+    
     if (y >= 700) {
         onGround = true;
     } else {
@@ -63,7 +65,7 @@ function game() {
 
     if (x < 0.0) {
         x = 0.0;
-    } else if (x > 700.0) {
+    } else if (x >= 700.0) {
         x = 700.0;
     }
 
@@ -102,6 +104,7 @@ window.addEventListener("keydown", function(event) {
     switch(event.code) {
         case "KeyW":
         case "ArrowUp":
+            console.log("key down");
             jumpKey = true;
             break;
         case "KeyA":
@@ -119,6 +122,7 @@ window.addEventListener("keyup", function(event) {
     switch(event.code) {
         case "KeyW":
         case "ArrowUp":
+            console.log("key up");
             jumpkey = false;
             break;
         case "KeyA":
