@@ -44,8 +44,8 @@ function updateTime() {
   let dateTimeDate = weekDay + " " + monthDay + " " + numberDay + " " + yearDay;
   let dateTimeTime = time;
 
-  $('#dateTimeDate').text(dateTimeDate);
-  $('#dateTimeTime').text(dateTimeTime);
+  $('#date').text(dateTimeDate);
+  $('#time').text(dateTimeTime);
   
   setTimeout(updateTime, 1000);
 }
