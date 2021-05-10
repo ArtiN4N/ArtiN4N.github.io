@@ -26,6 +26,7 @@ html {
   font-family: JetBrains;
   position: relative;
   padding: 20px;
+  text-align: center
 } #dateTimeDate {
   font-size: 4em;
   position: relative;
@@ -176,4 +177,12 @@ html {
 } #logtext {
   font-size: 1em;
   position: relative;
+}
+
+#time {
+
+}
+
+#date {
+
 }
