@@ -180,9 +180,15 @@ html {
 }
 
 #time {
-
+  font-size: 6em;
+  position: relative;
+  margin-bottom: 5px;
+  color: #009FB7;
 }
 
 #date {
-
+  font-size: 4em;
+  position: relative;
+  color: #FED766;
 }
+
