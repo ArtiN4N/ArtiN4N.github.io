@@ -231,3 +231,14 @@ button {
   width: 44px;
   height: 44px;
 }
+
+#searchFormContainer {
+  font-family: JetBrains;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+#searchForm {
+
+}
