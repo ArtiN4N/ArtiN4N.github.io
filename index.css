@@ -239,6 +239,6 @@ button {
   text-align: center;
 }
 
-#searchForm {
-
+.searchForm {
+  margin: 0 auto;
 }
