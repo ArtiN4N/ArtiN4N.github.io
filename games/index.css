@@ -6,8 +6,27 @@ html {
   height: 100%;
   width: 100%;
 } a {
-  //color: #ACFCD9;
+  text-decoration: none;
 }
 .container {
-
+  position: relative;
+  width: 25%;
+  left: 8%;
+  height: 25%;
+  top: 8%;
+  background: #2f3031;
+}
+.title {
+  position: relative;
+  top: 5%;
+}
+.time {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.days {
+  position: relative;
+  bottom: 5%;
 }
