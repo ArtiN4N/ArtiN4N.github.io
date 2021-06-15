@@ -16,17 +16,19 @@ html {
   top: 8%;
   background: #2f3031;
 }
+.text {
+  position: absolute;
+  left: 5%;
+  font-size: x-large;
+}
 .title {
-  position: relative;
   top: 5%;
 }
 .time {
-  position: relative;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .days {
-  position: relative;
   bottom: 5%;
 }
