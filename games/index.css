@@ -25,15 +25,16 @@ html {
   left: 5%;
   font-size: x-large;
   font-family: JetBrains;
-  text-align: center;
+  transform: translateX(-50%);
+  width: max-content;
 }
 .title {
   top: 5%;
 }
 .time {
   top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .days {
   bottom: 5%;
