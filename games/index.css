@@ -1,1 +1,13 @@
+html {
+  background-color: #181a1b;
+  color: #EFF1F3;
+} body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+} a {
+  //color: #ACFCD9;
+}
+.container {
 
+}
