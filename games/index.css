@@ -1,3 +1,7 @@
+@font-face {
+  font-family: JetBrains;
+  src: url(../fonts/jetbrains/web/woff2/JetBrainsMono-Regular.woff2);
+}
 html {
   background-color: #181a1b;
   color: #EFF1F3;
@@ -20,6 +24,7 @@ html {
   position: absolute;
   left: 5%;
   font-size: x-large;
+  font-family: JetBrains;
 }
 .title {
   top: 5%;
