@@ -13,6 +13,8 @@ html {
   border: 0 none;
   padding: 0;
   text-align: center;
+  width: min-content;
+  height: min-content;
 }
 
 #canvas {
