@@ -13,12 +13,24 @@ html {
   text-decoration: none;
   color: #094D92;
 }
+#1 {
+  top: 6.25%;
+  left: 6.25%;
+}
+#2 {
+  top: 6.25%;
+  left: 37.5%;
+}
+#3 {
+  top: 6.25%;
+  left: 68.75%;
+}
 .container {
   position: relative;
   width: 25%;
-  left: 8%;
+  
   height: 25%;
-  top: 8%;
+  
   background: #2f3031;
 }
 .text {
