@@ -26,11 +26,9 @@ html {
   left: 68.75%;
 }
 .container {
-  position: relative;
+  position: absolute;
   width: 25%;
-  
   height: 25%;
-  
   background: #2f3031;
 }
 .text {
