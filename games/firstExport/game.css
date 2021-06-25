@@ -2,7 +2,6 @@ html {
   background-color: #181a1b;
   color: #EFF1F3;
 } body {
-  position: absolute;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -14,6 +13,7 @@ html {
   border: 0 none;
   padding: 0;
   text-align: center;
+	position: absolute;
   width: min-content;
   height: min-content;
 }
